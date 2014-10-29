@@ -17,3 +17,11 @@ test('Should welcome me to Snowcial', function() {
     equal(find('h2#title').text(), 'Welcome to Snowcial');
   });
 });
+
+test('Should allow navigation back to root from another page', function() {
+  visit('/demo').then(function() {
+    click('a:contains("Home")').then(function() {
+      equal(find('h3').text(), 'Demo');
+    });
+  });
+});

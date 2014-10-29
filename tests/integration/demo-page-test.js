@@ -4,7 +4,7 @@ import startApp from 'feedengine/tests/helpers/start-app';
 
 var App;
 
-module('Integration - About Page', {
+module('Integration - Demo Page', {
   setup: function() {
     App = startApp();
   },
@@ -13,10 +13,10 @@ module('Integration - About Page', {
   }
 });
 
-test('Should navigate to the About page', function() {
+test('Should navigate to the Demo page', function() {
   visit('/').then(function() {
-    click("a:contains('About')").then(function() {
-      equal(find('h3').text(), 'About');
+    click('a:contains("Demo")').then(function() {
+      equal(find('h3').text(), 'Demo');
     });
   });
 });
