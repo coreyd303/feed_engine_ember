@@ -1,3 +1,5 @@
 {{#each}}
-  {{link-to name 'groups.show' this}}
+ {{~#link-to 'groups.show' this}}
+  {{name}} ({{trips.length}})
+ {{~/link-to}}
 {{/each}}
