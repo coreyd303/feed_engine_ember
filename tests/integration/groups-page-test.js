@@ -76,3 +76,26 @@ test('Should be able visit a group page', function() {
     equal(find('h4').text(), 'Shred Nest');
   });
 });
+
+test('Should list all trips for a group', function() {
+  visit('/groups/1').then(function() {
+    equal(find('li:contains("Pow pow bang bang")').length, 1);
+    equal(find('li:contains("Ski bums bombin")').length, 1);
+  });
+});
+
+this.get('/api/speakers/:id', function(request) {
+  var group = groups.find(function(group) {
+    if (group.id === perseInt(request.params.id, 10)) {
+      return group;
+    }
+  });
+
+  var groupTrips = groups.filter(function(trip) {
+    if (trip.group_id === speaker.id) {
+      return true;
+    }
+  });
+
+  return [200, {"Content-Type": "application/json"}, JSON.stringify({group: group, trips: groupTrips})];
+});
