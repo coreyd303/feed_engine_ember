@@ -7,6 +7,6 @@ export default Ember.ObjectController.extend({
       var group = this.get('model');
       group.save();
       this.transitionToRoute('groups.index');
-     }
+    }
   }
 });
