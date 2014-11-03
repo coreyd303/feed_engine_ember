@@ -9,6 +9,8 @@ Router.map(function() {
   this.route('demo');
   this.resource('groups', function() {
     this.route('show', {path: ':group_id'});
+    this.route('edit', {path: ':group_id/edit'});
+    this.route('create', {path: ':create'});
   });
 });
 
