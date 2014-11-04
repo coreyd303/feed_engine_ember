@@ -1,7 +1,7 @@
 <div class="jumbotron">
   <div class="container">
   <h1>Groups</h1>
-  <button class="btn btn-lg">{{#link-to 'groups.create' class="create-group"}}Create New Group{{/link-to}}</button>
+  <button class="btn btn-lg" id="btn-custom">{{#link-to 'groups.create' class="create-group"}}Create New Group{{/link-to}}</button>
   </div>
 </div>
 <div class="row">
@@ -10,8 +10,8 @@
       <div class="thumbnail">
         <div class="caption">
         {{~#link-to 'groups.show' this}}
-        <h4>{{name}}</h4>{{~/link-to}} 
-        (This group has {{trips.length}} trips)
+        <h3 class="group-title">{{name}}</h3>{{~/link-to}} 
+        <h5 class="group-title">This group has {{trips.length}} trips</h5>
         </div>
       </div>
     </div>
