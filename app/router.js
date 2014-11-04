@@ -6,7 +6,6 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('demo');
 
   this.resource('groups', function() {
     this.route('show', {path: ':group_id'});
