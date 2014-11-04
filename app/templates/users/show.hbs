@@ -1,0 +1,22 @@
+<h4>{{name}}</h4>&nbsp;
+{{link-to 'Edit' 'users.edit' model class='edit-user'}}
+<button {{action 'delete'}} class="delete-user">Delete</button>
+
+
+<h5>{{first_name}} {{last_name}}</h5>
+<p>{{email}}</p>
+
+
+<h5>Groups</h5>
+<ul>
+  {{#each groups}}
+    <li>{{name}}</li>
+  {{/each}}
+</ul>
+
+<h5>Trips</h5>
+<ul>
+  {{#each trips}}
+    <li>{{name}}</li>
+  {{/each}}
+</ul>

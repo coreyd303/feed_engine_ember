@@ -6,7 +6,7 @@ export default Ember.Route.extend({
       name: ''
     });
   },
-  
+
   actions: {
     create: function() {
     var my_model = this.controller.get('model');
