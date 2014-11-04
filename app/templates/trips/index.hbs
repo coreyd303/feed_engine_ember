@@ -1,0 +1,19 @@
+<h3>Trips</h3>
+
+<table>
+  <thead>
+    <th>Name</th><th>Trips Taken</th>
+  </thead>
+  
+  <tbody>
+    <p>{{#link-to 'trips.create' class="create-trip"}}Create{{/link-to}}</p>
+
+    {{#each}}
+      <tr>
+        <td>
+          {{~#link-to 'trips.show' this}}
+          {{name}}{{~/link-to}}</td><td>{{trips.length}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
