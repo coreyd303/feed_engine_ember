@@ -6,7 +6,7 @@ export default Ember.Route.extend({
    submit:  function() {
     var my_model = this.controller.get('model');
     my_model.save();
-    this.transitionTo('trips.show', my_model);
+    this.transitionTo('users.show', my_model);
     }
   }
 });
