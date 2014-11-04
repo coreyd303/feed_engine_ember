@@ -11,5 +11,6 @@ export default DS.Model.extend({
   epic_mix_username: DS.attr('string'),
   epic_mix_password: DS.attr('string'),
   trips: DS.hasMany('trip'),
-  groups: DS.hasMany('group')
+  groups: DS.hasMany('group'),
+  instas: DS.hasMany('insta')
 });
