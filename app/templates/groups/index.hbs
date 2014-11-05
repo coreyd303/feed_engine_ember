@@ -1,21 +1,17 @@
 <div class="jumbotron">
   <h1>Groups</h1>
+  <button class="btn btn-lg" id="btn-custom">{{#link-to 'groups.create' class="create-group"}}Create New Group{{/link-to}}</button>
 </div>
-
-<table>
-  <thead>
-    <th>Name</th><th>Trips Taken</th>
-  </thead>
-  
-  <tbody>
-    <p>{{#link-to 'groups.create' class="create-group"}}Create{{/link-to}}</p>
-
-    {{#each}}
-      <tr>
-        <td>
-          {{~#link-to 'groups.show' this}}
-          {{name}}{{~/link-to}}</td><td>{{trips.length}}</td>
-      </tr>
+<div class="row">
+  {{#each}}
+    <div class="col-md-3">
+      <div class="thumbnail">
+        <div class="caption">
+        {{~#link-to 'groups.show' this}}
+        <h3 class="group-title">{{name}}</h3>{{~/link-to}} 
+        <h5 class="group-title">This group has {{trips.length}} trips</h5>
+        </div>
+      </div>
+    </div>
     {{/each}}
-  </tbody>
-</table>
+</div>

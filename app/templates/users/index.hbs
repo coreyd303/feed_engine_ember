@@ -1,19 +1,5 @@
-<h3>Users</h3>
-
-<table>
-  <thead>
-    <th>Name</th>
-  </thead>
-
-  <tbody>
-    <p>{{#link-to 'users.create' class="create-user"}}Create{{/link-to}}</p>
-
-    {{#each}}
-      <tr>
-        <td>
-          {{~#link-to 'users.show' this}}
-          {{first_name}}{{~/link-to}}</td>
-      </tr>
-    {{/each}}
-  </tbody>
-</table>
+<h1>Users</h1>
+{{#each}}
+    {{~#link-to 'users.show' this}}
+    {{name}}{{~/link-to}} 
+{{/each}}
