@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model: function() {
-    return this.store.createRecord('trip', {
+    return this.store.createRecord('group', {
       name: ''
     });
   },
@@ -11,7 +11,7 @@ export default Ember.Route.extend({
     create: function() {
     var my_model = this.controller.get('model');
     my_model.save();
-    this.transitionTo('trips.show', my_model);
+    this.transitionTo('groups.show', my_model);
     }
   }
 });
