@@ -31,5 +31,19 @@ html, body {
 
 .create-trip {
   margin-left: auto;
-  margin-right: auto; 
+  margin-right: auto;
+}
+
+// new trip page
+
+.form-box {
+  width: auto;
+  margin-bottom: 5px;
+}
+
+.form-control-custom {
+  width: 200px;
+  border-width: 0;
+  border-radius: 5px;
+  margin-bottom: 5px;
 }
