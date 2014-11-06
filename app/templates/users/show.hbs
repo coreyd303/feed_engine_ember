@@ -17,7 +17,7 @@
 <h5>Trips</h5>
 <ul>
   {{#each trips}}
-    <li>{{name}}</li>
+    <li>{{#link-to 'trips.show' trip}}{{name}}{{/link-to}}</li>
   {{/each}}
 </ul>
 

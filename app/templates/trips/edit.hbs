@@ -1,7 +1,21 @@
-<h4>Edit</h4>
+<div class="jumbotron">
+  <h4 class="create-new-trip">Edit Trip</h4>
 
-<p>Name:&nbsp;{{input value=name class='trip-name'}}</p>
+  <div class="form-box">
+    {{input placeholder="Name your trip!" value=name class='form-control'}}
+  </div>
 
-<p>Description:&nbsp;{{input value=description class='trip-description'}}</p>
+  <div class="form-box">
+    {{textarea placeholder="Describe your trip: e.g. Dave's epic bachelor party at Big Rock Candy Mountain" value=description class='form-control'}}
+  </div>
 
-<p><button type='submit' {{action 'submit'}} class='commit-trip-change'>Submit</button></p>
+  <div class="form-box">
+    {{input placeholder="Location: e.g. Big Rock Candy Mountain" value=trip_location class='form-control'}}
+  </div>
+
+  <div>
+    <input type="date" name="date" class='form-control-custom'>
+  </div>
+
+  <a type='submit' class="btn btn-lg btn-success" {{action 'create'}}>Submit</a>
+</div>

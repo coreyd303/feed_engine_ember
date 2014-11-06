@@ -1,6 +1,13 @@
 <h4>{{name}}</h4>&nbsp;
-{{link-to 'Edit' 'trips.edit' model class='edit-trip'}}
+{{link-to 'Edit' 'trips' model class='edit-trip'}}
 <button {{action 'delete'}} class="delete-trip">Delete</button>
 
 <h5>Trip Description:</h5>
 <p>{{description}}</p>
+
+<h5> Users on the trip!</h5>
+<ul>
+  {{#each users}}
+    <li>{{#link-to 'users.show' user}}{{name}}{{/link-to}}</link-to}}</li>
+  {{/each}}
+</ul>
