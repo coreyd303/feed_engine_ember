@@ -16,6 +16,7 @@ Router.map(function() {
   });
 
   this.resource('trips', function() {
+    this.route('feed', {path: 'trips'});
     this.route('show', {path: ':trip_id'});
     this.route('edit', {path: ':trip_id/edit'});
     this.route('create', {path: 'create'});

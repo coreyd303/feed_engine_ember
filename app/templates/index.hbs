@@ -1,24 +1,24 @@
-<div id="welcome" class="jumbotron">
+<div class="jumbotron">
   {{#link-to "trips.create" class="center-block btn btn-success"}}Plan a trip!{{/link-to}}
-  <h3>Welcome to Snowcial</h3>
-  <p>Snocial is a sowcial platform for the snowsports community. Snowcial provides a fast and easy way to create and share your winter adventures with your friends and the community at large.</p>
+  <h3 class="site-text">Welcome to Snowcial</h3>
+  <p class="site-text">Snocial is a sowcial platform for the snowsports community. Snowcial provides a fast and easy way to create and share your winter adventures with your friends and the community at large.</p>
   {{#link-to 'trips.create' class="center-block create-trip btn btn-success"}}Plan a trip!{{/link-to}}
 </div>
 
-<div class="trip-feed-box">
-  <p>Check out what our members are up to!</p>
+<div class="jumbotron">
+  <p class="site-text">Check out what our members are up to!</p>
   <div class="row">
-    {{#each}}
-      <div class="col-md-3">
-        <div class="thumbnail">
-          <div class="caption">
-          {{~#link-to 'trips.show' this}}
-          <h4>{{name}}</h4>{{~/link-to}} 
-          </div>
+  {{#each}}
+    <div class="col-md-3">
+      <div class="thumbnail">
+        <div class="caption">
+        {{~#link-to 'trips.show' this}}
+        <h4>{{name}}</h4>{{~/link-to}} 
         </div>
       </div>
-      {{/each}}
-  </div>
+    </div>
+  {{/each}}
+</div>
 </div>
 
 <!-- Go into the data for trips, pick 3 random ones, and display them
