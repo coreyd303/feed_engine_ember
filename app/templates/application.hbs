@@ -12,13 +12,15 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li>{{link-to 'Home' 'application'}}</li>
-            <li>{{link-to 'Groups' 'groups'}}</li>
             <li>{{link-to 'Trips' 'trips'}}</li>
             <li>{{link-to 'Users' 'users'}}</li>
+            <li><a href='/users' onClick="window.open('http://127.0.0.1:3000/auth/twitter', '_blank')">Sign In with Twitter</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
 
+<div class="container">
 
 {{outlet}}
+</div>

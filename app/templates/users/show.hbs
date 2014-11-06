@@ -3,7 +3,7 @@
 <button {{action 'delete'}} class="delete-user">Delete</button>
 
 
-<h5>{{first_name}} {{last_name}}</h5>
+<h5>{{name}}</h5>
 <p>{{email}}</p>
 
 
@@ -20,3 +20,8 @@
     <li>{{name}}</li>
   {{/each}}
 </ul>
+
+<h5>Instas</h5>
+  {{#each instas}}
+    <img style='padding:50px' src="{{unbound thumbnail_url}}">
+  {{/each}}
