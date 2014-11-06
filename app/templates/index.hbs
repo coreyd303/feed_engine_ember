@@ -5,9 +5,20 @@
   {{#link-to 'trips.create' class="center-block create-trip btn btn-success"}}Plan a trip!{{/link-to}}
 </div>
 
-<div id="trip-feed" class="trip-feed-box">
+<div class="trip-feed-box">
   <p>Check out what our members are up to!</p>
-
+  <div class="row">
+    {{#each}}
+      <div class="col-md-3">
+        <div class="thumbnail">
+          <div class="caption">
+          {{~#link-to 'trips.show' this}}
+          <h4>{{name}}</h4>{{~/link-to}} 
+          </div>
+        </div>
+      </div>
+      {{/each}}
+  </div>
 </div>
 
 <!-- Go into the data for trips, pick 3 random ones, and display them
