@@ -1,4 +1,4 @@
-   <nav class="navbar navbar-inverse" role="navigation">
+    <nav class="navbar navbar-inverse" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -14,11 +14,13 @@
             <li>{{link-to 'Home' 'application'}}</li>
             <li>{{link-to 'Trips' 'trips'}}</li>
             <li>{{link-to 'Users' 'users'}}</li>
+            <li><a href='/users' onClick="window.open('http://127.0.0.1:3000/auth/twitter', '_blank')">Sign In with Twitter</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
 
 <div class="container">
+
 {{outlet}}
 </div>
